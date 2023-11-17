@@ -1,0 +1,16 @@
+.media--fullwidth {
+    width: 100%;
+    height: auto;
+}
+
+nav>h4::before {
+    content: url("../../public/icones/mdi-cat.svg");
+}
+
+nav>ul>li>a::before {
+    content: url("../../public/icones/mdi-dog.svg");
+}
+
+nav>ul>li>ul>li>a::before {
+    content: url("../../public/icones/mdi-dog.svg");
+}
