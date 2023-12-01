@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen,}">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Test menu</title>
+  <script defer src="https://unpkg.com/alpinejs"></script>
+  <script defer src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <style>
+    .menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #fff;
+      display: grid;
+      place-content: center;
+    }
+  
+    .header__menu {
+      position: relative;
+        z-index: 10;
+    }
+  </style>
+  <style>
+    .noscroll,
+    .noscroll body {
+      overflow: hidden;
+    }
+  </style>
+  <link rel="stylesheet" href="../src/css/styles.css">
+</head>
+
+<body>
+  <!-- https://emmet.io/ -->
+  <!-- header>h1{Test de menu} -->
+  <header>
+    <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class="header__menu">
+      menu</button>
+    <h1>Test de menu</h1>
+  <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.1300ms
+  class="menu">
+  
+<ul>
+  <li><a href="cats/index.html">Chats</a></li>
+  <li><a href="dogs/index.html">Chiens</a></li>
+</ul>
+  </nav>
+  </header>
+  <!-- h2>lorem2^p>lorem -->
+  <h2>Lorem, ipsum.</h2>
+  <p>
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat
+    mollitia adipisci alias error laboriosam numquam incidunt magni eum eos
+    nemo aliquid pariatur quam voluptates animi laudantium, aperiam
+    consectetur nobis enim.
+  </p>
+  <dl>
+    <dt>Lorem.</dt>
+    <dd>Lorem ipsum dolor sit amet.</dd>
+  </dl>
+  <dl>
+    <dt>Optio!</dt>
+    <dd>Corrupti numquam eveniet quis fugit!</dd>
+  </dl>
+  <dl>
+    <dt>Officia.</dt>
+    <dd>Vero debitis sequi iure tempore.</dd>
+  </dl>
+
+  <nav>
+    <h4>menu</h4>
+    <ul>
+      <li><a href="cats/index.html">Les chats</a>
+  
+      </li>
+      <li><a href="dogs/index.html">Les chiens</a></li>
+    </ul>
+  </nav>
+
+</body>
+
+</html>
